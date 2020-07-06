@@ -20,12 +20,22 @@ class TestBaiDu(unittest.TestCase):
         self.base_url = "https://www.baidu.com/"
 
     def test_search_selenium(self):
+        '''这是百度的测试用例'''
         self.driver.get(self.base_url)
         self.driver.find_element_by_id("kw").send_keys("selenium")
         self.driver.find_element_by_id("su").click()
         sleep(2)
         title = self.driver.title
         self.assertEqual(title,"selenium_百度搜索")
+
+    def test_search(self,search_key):
+        self.driver.get(self.base_url)
+        self.driver.find_element_by_id("kw").send_keys(search_key)
+        self.driver.find_element_by_id("su").click()
+        sleep(2)
+        title = self.driver.title
+        self.assertEqual(title,"selenium_百度搜索")
+
 
     def tearDown(self) -> None:
         self.driver.quit()
