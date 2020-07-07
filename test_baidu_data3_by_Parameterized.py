@@ -1,7 +1,7 @@
 #-*- coding: utf-8 -*-
 
 """
-@auther:wangjiong
+@auther:tester
 @data:2020/7/6
 @Project:test0310
 @FileName:test_baidu_data.py
@@ -49,4 +49,4 @@ class TestBaidu(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main(verbosity=2)
+    unittest.main(verbosity=1)
